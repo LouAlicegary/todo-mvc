@@ -1,7 +1,7 @@
 export default function() {
 
 
-    this.get('/todos', function(db, request) {
+    this.get('/todos', function(db) {
         return {
             todos: db.todos.map(attrs => (attrs))
         };
@@ -18,7 +18,7 @@ export default function() {
 
 
     this.put('/todos/:id', function(db, request) {
-        let id = request.params.id
+        let id = request.params.id;
         let attrs = JSON.parse(request.requestBody).todo;
         let todo = db.todos.update({id: id, title: attrs.title, complete: attrs.complete});
         return {
