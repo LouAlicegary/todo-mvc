@@ -17,9 +17,10 @@ export default function() {
     });
 
 
-    this.patch('/todos/:id', function(db, request) {
-        let attrs = JSON.parse(request.requestBody);
-        let todo = db.todos.update(attrs.data.id, attrs.data.attributes);
+    this.put('/todos/:id', function(db, request) {
+        let id = request.params.id
+        let attrs = JSON.parse(request.requestBody).todo;
+        let todo = db.todos.update({id: id, title: attrs.title, complete: attrs.complete});
         return {
             todo: todo
         };

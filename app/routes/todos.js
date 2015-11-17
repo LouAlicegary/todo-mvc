@@ -13,6 +13,14 @@ export default Ember.Route.extend({
                title: newTitle,
                complete: false
            }).save();
+        },
+
+        updateTodo(todo) {
+            todo.save();
+        },
+        
+        deleteTodo(todo) {
+            todo.destroyRecord();
         }
     
     }
