@@ -1,5 +1,10 @@
 # Todo-mvc
 
+This is derived from [http://www.thetechcofounder.com/getting-started-with-ember-js-using-ember-cli/](http://www.thetechcofounder.com/getting-started-with-ember-js-using-ember-cli/)
+
+Some modifications were necessary to get it up and running, specifically with Mirage support
+
+
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
