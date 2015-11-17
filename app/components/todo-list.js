@@ -29,7 +29,7 @@ export default Ember.Component.extend({
             this.set('allAreDone', false);
         }
     },
-    
+
     allAreDoneObserver: Ember.observer('allAreDone', function() {
         let completeValue = this.get('allAreDone');
         let todos = this.get('todos');
@@ -38,6 +38,7 @@ export default Ember.Component.extend({
             this.sendAction('updateTodo', todo);
         });
     }),
+
 
     actions: {
     
